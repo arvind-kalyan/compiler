@@ -1,0 +1,73 @@
+a dw 0
+b dw 0
+t0 dw 0
+t2 dw 0
+d dw 0
+t3 dw 0
+s db 120 dup (0)
+t5 db 120 dup (0)
+t7 dw 0
+c dw 0
+s2 db 120 dup (0)
+s3 db 120 dup (0)
+t9 db 120 dup (0)
+s1 db 120 dup (0)
+t11 dw 0
+mov AX, a
+mov BX,b
+add AX,BX
+mov CX,AX
+mov t0,CX
+mov AX, a
+mov BX,t0
+mov AX,BX
+mov a,AX
+mov AX, a
+mov BX,b
+imul BX
+mov CX,AX
+mov t2,CX
+mov AX, t2
+mov BX,d
+add AX,BX
+mov CX,AX
+mov t3,CX
+mov AX, b
+mov BX,t3
+mov AX,BX
+mov b,AX
+mov AX,0
+mov t5,AX
+
+mov AX, s
+mov t5,CX
+mov AX, b
+mov BX,t5
+mov AX,BX
+mov b,AX
+mov AX, b
+mov BX,a
+imul BX
+mov CX,AX
+mov t7,CX
+mov AX, c
+mov BX,t7
+mov AX,BX
+mov c,AX
+mov AX, s2
+mov BX,s3
+mov t9,CX
+mov AX, s1
+mov BX,t9
+mov AX,BX
+mov s1,AX
+mov AX, a
+mov BX,b
+idiv BX
+mov CX,AX
+mov t11,CX
+mov AX, a
+mov BX,t11
+mov AX,BX
+mov a,AX
+ret

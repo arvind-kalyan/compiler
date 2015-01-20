@@ -1,0 +1,17 @@
+_main[]
+	
+	int a,b,c,d;
+	real e;
+	string s;
+	a = a + b;
+	b=a*b+d;
+	b=@c;
+	matrix m1,m2,m3;
+	string s1,s2,s3;
+	c=b*a;
+	s1=s2+s3;
+	a=a/b;
+	
+	# whether b is declared or not will be seen by the semantic analyzer
+	print(a);
+end;
